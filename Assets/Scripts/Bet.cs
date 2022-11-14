@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Bet : MonoBehaviour
 {
     public List<Image> BetBtn;
+    public List<Image> OffBtn;
+    public List<Image> betbtn;
    
 
     // Start is called before the first frame update
@@ -28,25 +30,36 @@ public class Bet : MonoBehaviour
             if (int.Parse(BetBtn[i].gameObject.name) <= Stars.Instance._Currency)
             {
                 BetBtn[i].GetComponent<Button>().interactable = true;
+                OffBtn[i].color = Color.white;
+                
+
             }
             else
             {
                 BetBtn[i].GetComponent<Button>().interactable = false;
+                OffBtn[i].color = Color.red;
+               
             }
+           
             
         }
 
 
 
     }
-    public void ChooseBet(Image img) 
+    public void ChooseBet(Image img)
     {
-        
+        for (int a = 0; a < BetBtn.Count; a++)
+        {
+            BetBtn[a].color = Color.clear;
+    
+        }
         Session.Instance.BetAmount = int.Parse(img.gameObject.name);
-        img.color = Color.white;
         Debug.Log("Button is White");
-
+        img.color = Color.white;
+        betbtn[0] = betbtn[1];
     }
+
 }
       
 

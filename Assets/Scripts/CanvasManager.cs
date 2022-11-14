@@ -27,8 +27,8 @@ public class CanvasManager : MonoBehaviour
     {
         MainMenu.Hide();
         Settingpanel.Hide();
-        Betpanel.Hide();
-        StartPanel.Show(true);
+        Betpanel.Show(true);
+        StartPanel.Hide();
         Scorepanel.Hide();
         BestIndicaor.Hide();
         LostPanel.Hide();
