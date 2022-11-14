@@ -7,7 +7,7 @@ public class Bet : MonoBehaviour
 {
     public List<Image> BetBtn;
     public List<Image> OffBtn;
-    public List<Image> betbtn;
+    public List<Button> betbtn;
    
 
     // Start is called before the first frame update
@@ -23,6 +23,7 @@ public class Bet : MonoBehaviour
     }
     private void OnEnable()
     {
+        betbtn[0].interactable = false;
         for (int i = 0; i < BetBtn.Count; i++)
         {
             BetBtn[i].color = Color.clear;
@@ -31,7 +32,7 @@ public class Bet : MonoBehaviour
             {
                 BetBtn[i].GetComponent<Button>().interactable = true;
                 OffBtn[i].color = Color.white;
-                
+               // betbtn[0] = betbtn[1];
 
             }
             else
@@ -49,6 +50,8 @@ public class Bet : MonoBehaviour
     }
     public void ChooseBet(Image img)
     {
+        betbtn[0].interactable = true;
+
         for (int a = 0; a < BetBtn.Count; a++)
         {
             BetBtn[a].color = Color.clear;
@@ -57,7 +60,7 @@ public class Bet : MonoBehaviour
         Session.Instance.BetAmount = int.Parse(img.gameObject.name);
         Debug.Log("Button is White");
         img.color = Color.white;
-        betbtn[0] = betbtn[1];
+       
     }
 
 }
