@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -11,10 +12,12 @@ public class CanvasManager : MonoBehaviour
     public GameObject StartPanel;
     public GameObject Scorepanel;
     public GameObject LostPanel;
+    //  private object scenemanagerr;
+
     // Start is called before the first frame update
     void Start()
     {
-       SoundManager.Instance.MainmenuSound();  
+        SoundManager.Instance.MainmenuSound();
         MainMenu.Show(true);
         Settingpanel.Hide();
         Betpanel.Hide();
@@ -58,12 +61,28 @@ public class CanvasManager : MonoBehaviour
     }
     public void BackBtnClicked()
     {
-        MainMenu.SetActive(true);
-        Settingpanel.SetActive(false);
-        Betpanel.SetActive(false);
-        StartPanel.SetActive(false);
-        Scorepanel.SetActive(false);
-        BestIndicaor.SetActive(false);
-        LostPanel.SetActive(false);
+        MainMenu.Show(true);
+        Settingpanel.Hide();
+        Betpanel.Hide();
+        StartPanel.Hide();
+        Scorepanel.Hide();
+        BestIndicaor.Hide();
+        LostPanel.Hide();
+    }
+    public void SceneReload()
+    {
+        SceneManager.LoadScene(0);
+
+    }
+    public void RestartBtnClicked()
+    {
+        MainMenu.Hide();
+        Settingpanel.Hide();
+        Betpanel.Show(true);
+        StartPanel.Hide();
+        Scorepanel.Hide();
+        BestIndicaor.Hide();
+        LostPanel.Hide();
+
     }
 }
