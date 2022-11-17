@@ -4992,9 +4992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scores: 
-  Win: 0
   playerscore:
-    scores: 
+    scores: 00000000
 --- !u!4 &1215579766
 Transform:
   m_ObjectHideFlags: 0
