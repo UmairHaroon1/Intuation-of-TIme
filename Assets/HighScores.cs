@@ -7,12 +7,14 @@ public class HighScores : MonoBehaviour
 {
 
     public List<int> Scores;
-  
-    
+    public int Win;
+    public PlayerScore playerscore;
+
+
     // Start is called before the first frame update
     void Start()
     {
-       
+        Scores.Add(Win);
     }
 
     // Update is called once per frame
@@ -20,20 +22,13 @@ public class HighScores : MonoBehaviour
     {
         
     }
-
-}
-[Serializable]
-public class PlayerScore : MonoBehaviour
-{
-    public PlayerScore playerscore;
-    public List<int> scores;
-   public void OnEnable()
+    public void OnEnable()
     {
-        if (PlayerPrefs.HasKey("highscores")) 
+        if (PlayerPrefs.HasKey("highscores"))
         {
-            string Key = JsonUtility.ToJson(playerscore);
-            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString("highscores", playerscore);             
-        
+            //string Key = JsonUtility.ToJson(playerscore);
+            JsonUtility.FromJsonOverwrite
+            (PlayerPrefs.GetString("highscores"), playerscore);
         }
     }
     public void OnDisable()
@@ -43,6 +38,12 @@ public class PlayerScore : MonoBehaviour
 
 
     }
+}
+[Serializable]
+public class PlayerScore
+{
+    public List<int> scores;
+  
 
 
 
