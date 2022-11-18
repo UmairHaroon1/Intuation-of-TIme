@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,11 @@ public class GamePanel : MonoBehaviour
         SoundManager.Instance.Play(SoundManager.Instance.Button);
         Ball.Instance.Stop = true;
         CanvasManager.Instanve.OnTake();
+    }
+
+    private void OnDisable()
+    {
+        BackgroundLoop.Instance.Toggle(false);
+
     }
 }

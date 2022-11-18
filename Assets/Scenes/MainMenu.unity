@@ -1438,6 +1438,8 @@ MonoBehaviour:
   StartPanel: {fileID: 472014160}
   Scorepanel: {fileID: 1010803185}
   LostPanel: {fileID: 78263783}
+  GamePlay:
+  - {fileID: 1891665664}
 --- !u!1 &323027586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,7 +3787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &639229258
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9914,7 +9916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1891665665
 Transform:
   m_ObjectHideFlags: 0
@@ -11768,3 +11770,4 @@ MonoBehaviour:
   Speed: 2
   UIText: {fileID: 889235929}
   score: 0
+  Stop: 0

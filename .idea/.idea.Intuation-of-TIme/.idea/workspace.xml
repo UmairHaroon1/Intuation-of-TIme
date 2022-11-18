@@ -20,21 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe58078e-c967-4cf6-a418-3fc01d93cf43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AAB+APK+KEYSTORE/user1.keystore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AAB+APK+KEYSTORE/user1.keystore.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Hemico SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hemico SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HighScores.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HighScores.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Score.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HelperFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HelperFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Session.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intuation-of-TIme/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intuation-of-TIme/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GamePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GamePanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +61,8 @@
         <option value="$PROJECT_DIR$/Assets/LostPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BackgroundLoop.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Ball.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CanvasManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Ball.cs" />
         <option value="$PROJECT_DIR$/Assets/GamePanel.cs" />
       </list>
     </option>
@@ -115,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668567569163</updated>
       <workItem from="1668567596206" duration="1844000" />
-      <workItem from="1668662056574" duration="9438000" />
+      <workItem from="1668662056574" duration="9771000" />
     </task>
     <servers />
   </component>

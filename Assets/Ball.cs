@@ -20,6 +20,7 @@ public class Ball : MonoBehaviour
 
     private void OnEnable()
     {
+        BackgroundLoop.Instance.Toggle(true);
         score = 0;
     }
 
