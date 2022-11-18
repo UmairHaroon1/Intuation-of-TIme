@@ -27,20 +27,20 @@ public class BackgroundLoop : MonoBehaviour
     public bool Vertical;
     void Start()
     {
-        mainCamera = gameObject.GetComponent<Camera>();
-        screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
-        foreach (GameObject obj in levels)
-        {
-            if (MoveDirection==Direction.Horizontal)
-            {
-                loadChildObjects(obj);
-            }
-            else if (MoveDirection == Direction.Vertical)
-            {
-                loadChildObjectsVertical(obj);
-
-            }
-        }
+        // mainCamera = gameObject.GetComponent<Camera>();
+        // screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
+        // foreach (GameObject obj in levels)
+        // {
+        //     if (MoveDirection==Direction.Horizontal)
+        //     {
+        //         loadChildObjects(obj);
+        //     }
+        //     else if (MoveDirection == Direction.Vertical)
+        //     {
+        //         loadChildObjectsVertical(obj);
+        //
+        //     }
+        // }
     }
     void loadChildObjects(GameObject obj)
     {
@@ -138,16 +138,16 @@ public class BackgroundLoop : MonoBehaviour
     }
     void LateUpdate()
     {
-        foreach (GameObject obj in levels)
-        {
-            if (MoveDirection == Direction.Horizontal)
-            {
-                repositionChildObjects(obj);
-            }
-            else if (MoveDirection == Direction.Vertical)
-            {
-                repositionChildObjectsVertical(obj);
-            }
-        }
+        // foreach (GameObject obj in levels)
+        // {
+        //     if (MoveDirection == Direction.Horizontal)
+        //     {
+        //         repositionChildObjects(obj);
+        //     }
+        //     else if (MoveDirection == Direction.Vertical)
+        //     {
+        //         repositionChildObjectsVertical(obj);
+        //     }
+        // }
     }
 }

@@ -53,7 +53,6 @@ public class CanvasManager : MonoBehaviour
         BestIndicaor.Hide();
         LostPanel.Hide();
 
-        SoundManager.Instance.GameSound();
         
 
     }
@@ -95,13 +94,10 @@ public class CanvasManager : MonoBehaviour
     }
     public void SceneReload()
     {
-        SoundManager.Instance.Play(SoundManager.Instance.Button);
-        SceneManager.LoadScene(0);
+        Fade.Instance.LoadScene("MainMenu");
     }
     public void RestartBtnClicked()
     {
-        SoundManager.Instance.Play(SoundManager.Instance.Button);
-        SoundManager.Instance.Play(SoundManager.Instance.Button);
         Session.Instance.Replay = true;
         Fade.Instance.LoadScene("MainMenu");
 
@@ -110,6 +106,8 @@ public class CanvasManager : MonoBehaviour
 
     public void OnClickGamePlay()
     {
+        SoundManager.Instance.GameSound();
+
         SoundManager.Instance.Play(SoundManager.Instance.Button);
         Stars.Instance.Currency -= Session.Instance.BetAmount;
         Betpanel.Hide();

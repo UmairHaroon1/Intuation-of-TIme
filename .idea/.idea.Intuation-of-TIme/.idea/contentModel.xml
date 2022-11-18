@@ -59,6 +59,7 @@
           <e p="Bet.cs" t="Include" />
           <e p="CanvasManager.cs" t="Include" />
           <e p="ChangeLanguage.cs" t="Include" />
+          <e p="ClicSound.cs" t="Include" />
           <e p="Fade.cs" t="Include" />
           <e p="FollowCamera2D.cs" t="Include" />
           <e p="HelperFunctions.cs" t="Include" />
