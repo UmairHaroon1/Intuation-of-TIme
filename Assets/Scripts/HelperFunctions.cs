@@ -52,7 +52,7 @@ public static class HelperFunctions
            g.alpha = 1;
         });
     }
-    public static void Show(this GameObject parent, bool v)
+    public static void Show(this GameObject parent)
     {
         CanvasGroup g = parent.GetComponent<CanvasGroup>();
        

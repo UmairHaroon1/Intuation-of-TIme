@@ -6,12 +6,13 @@ public class SoundManager : Singletion<SoundManager>
 {
     public AudioSource MainMenuSound;
     public AudioSource Source;
-    // public AudioClip MainMenuClip;
-    //public void BtnClick(AudioClip c)
-    //{
-    //    Source.Play();
-    //    DontDestroyOnLoad(gameObject)
-    // }
+public AudioClip FlewAway;
+public AudioClip Button;
+    public void Play(AudioClip c)
+    {
+        Source.Play();
+     
+     }
   
     public void Awake()
     {

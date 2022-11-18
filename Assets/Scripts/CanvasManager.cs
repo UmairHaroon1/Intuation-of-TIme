@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CanvasManager : MonoBehaviour
 {
+    public static CanvasManager Instanve;
     public GameObject MainMenu;
     public GameObject BestIndicaor;
     public GameObject Settingpanel;
@@ -12,13 +13,21 @@ public class CanvasManager : MonoBehaviour
     public GameObject StartPanel;
     public GameObject Scorepanel;
     public GameObject LostPanel;
+
+    public List<GameObject> GamePlay;
     //  private object scenemanagerr;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (Session.Instance.Replay)
+        {
+            Session.Instance.Replay = false;
+            Restrt();
+            return;
+        }
         SoundManager.Instance.MainmenuSound();
-        MainMenu.Show(true);
+        MainMenu.Show();
         Settingpanel.Hide();
         Betpanel.Hide();
         StartPanel.Hide();
@@ -30,7 +39,7 @@ public class CanvasManager : MonoBehaviour
     {
         MainMenu.Hide();
         Settingpanel.Hide();
-        Betpanel.Show(true);
+        Betpanel.Show();
         StartPanel.Hide();
         Scorepanel.Hide();
         BestIndicaor.Hide();
@@ -42,7 +51,7 @@ public class CanvasManager : MonoBehaviour
     public void SettingBtnClicked()
     {
         MainMenu.Hide();
-        Settingpanel.Show(true);
+        Settingpanel.Show();
         Betpanel.Hide();
         StartPanel.Hide();
         Scorepanel.Hide();
@@ -56,12 +65,12 @@ public class CanvasManager : MonoBehaviour
         Betpanel.Hide();
         StartPanel.Hide();
         Scorepanel.Hide();
-        BestIndicaor.Show(true);
+        BestIndicaor.Show();
         LostPanel.Hide();
     }
     public void BackBtnClicked()
     {
-        MainMenu.Show(true);
+        MainMenu.Show();
         Settingpanel.Hide();
         Betpanel.Hide();
         StartPanel.Hide();
@@ -71,18 +80,42 @@ public class CanvasManager : MonoBehaviour
     }
     public void SceneReload()
     {
-        SceneManager.LoadScene(0);
 
     }
     public void RestartBtnClicked()
     {
+        Session.Instance.Replay = true;
+        Fade.Instance.LoadScene("Game");
+
+
+    }
+
+    public void OnClickGamePlay()
+    {
+        Betpanel.Hide();
+        GamePlay.ForEach(x=>x.SetActive(true));
+        StartPanel.Show();
+    }
+
+    public void OnGameOver()
+    {
+        LostPanel.Show();
+        GamePlay.ForEach(x=>x.SetActive(false));
+        StartPanel.Hide();
+    }public void OnTake()
+    {
+        Scorepanel.Show();
+        GamePlay.ForEach(x=>x.SetActive(false));
+        StartPanel.Hide();
+    }
+    void Restrt()
+    {
         MainMenu.Hide();
         Settingpanel.Hide();
-        Betpanel.Show(true);
+        Betpanel.Show();
         StartPanel.Hide();
         Scorepanel.Hide();
         BestIndicaor.Hide();
         LostPanel.Hide();
-
     }
 }

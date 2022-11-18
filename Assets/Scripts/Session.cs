@@ -7,7 +7,7 @@ using UnityEngine;
 public class Session : Singletion<Session>
 {
     public int BetAmount;
-    
-  
+    public bool Replay;
+
 }
 

@@ -48,6 +48,7 @@ public class Bet : MonoBehaviour
 
 
     }
+
     public void ChooseBet(Image img)
     {
         betbtn[0].interactable = true;
@@ -55,14 +56,14 @@ public class Bet : MonoBehaviour
         for (int a = 0; a < BetBtn.Count; a++)
         {
             BetBtn[a].color = Color.clear;
-    
+
         }
+
         Session.Instance.BetAmount = int.Parse(img.gameObject.name);
         Debug.Log("Button is White");
         img.color = Color.white;
-       
+        CanvasManager.Instanve.OnClickGamePlay();
     }
-
 }
       
 

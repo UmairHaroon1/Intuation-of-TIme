@@ -6,20 +6,16 @@ using System;
 public class HighScores : MonoBehaviour
 {
 
-    public List<int> Scores;
+    public static HighScores Instance;
    
     public PlayerScore playerscore;
 
-
-    void Start()
+    private void Awake()
     {
-   
+        Instance = this;
     }
 
-      void Update()
-    {
-        
-    }
+  
     public void OnEnable()
     {
         if (PlayerPrefs.HasKey("highscores"))
