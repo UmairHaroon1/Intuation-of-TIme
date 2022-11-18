@@ -5,9 +5,10 @@ using UnityEngine;
 public class SoundManager : Singletion<SoundManager>
 {
     public AudioSource MainMenuSound;
+    public AudioClip Button;
     public AudioSource Source;
-public AudioClip FlewAway;
-public AudioClip Button;
+    public AudioClip FlewAway;  
+    
     public void Play(AudioClip c)
     {
         Source.Play();

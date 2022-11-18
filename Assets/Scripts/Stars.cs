@@ -11,17 +11,17 @@ public class Stars : MonoBehaviour
    // public GameObject StarText;
    // public int  Currency;
     public TextMeshProUGUI Currencytext;
-    public   int Currency;
-    public int _Currency
+    public   int _Currency;
+    public int Currency
     {
         get 
         {
-            return Currency; 
+            return _Currency; 
         }
         set
         {
 
-            Currency = value;
+            _Currency = value;
             Currencytext.text = Currency.ToString();
         }
         
@@ -38,7 +38,7 @@ public class Stars : MonoBehaviour
 
     private void OnEnable()
     {
-    PlayerPrefs.GetInt("currency",1000);
+    Currency=PlayerPrefs.GetInt("currency",1000);
     }
     private void OnDisable()
     {

@@ -17,7 +17,10 @@ public class CanvasManager : MonoBehaviour
     public GameObject StartPanel;
     public GameObject Scorepanel;
     public GameObject LostPanel;
-
+    private void Awake()
+    {
+        Instanve = this;
+    }
     public List<GameObject> GamePlay;
     //  private object scenemanagerr;
 
@@ -41,6 +44,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void StartBtnClicked()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         MainMenu.Hide();
         Settingpanel.Hide();
         Betpanel.Show();
@@ -50,10 +54,12 @@ public class CanvasManager : MonoBehaviour
         LostPanel.Hide();
 
         SoundManager.Instance.GameSound();
+        
 
     }
     public void SettingBtnClicked()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         MainMenu.Hide();
         Settingpanel.Show();
         Betpanel.Hide();
@@ -64,6 +70,7 @@ public class CanvasManager : MonoBehaviour
     }
     public void bestindicatorBtnClicked()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         MainMenu.Hide();
         Settingpanel.Hide();
         Betpanel.Hide();
@@ -76,6 +83,7 @@ public class CanvasManager : MonoBehaviour
  //   public Button b;
     public void BackBtnClicked()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
 
         MainMenu.Show();
         Settingpanel.Hide();
@@ -87,18 +95,23 @@ public class CanvasManager : MonoBehaviour
     }
     public void SceneReload()
     {
-
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
+        SceneManager.LoadScene(0);
     }
     public void RestartBtnClicked()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         Session.Instance.Replay = true;
-        Fade.Instance.LoadScene("Game");
+        Fade.Instance.LoadScene("MainMenu");
 
 
     }
 
     public void OnClickGamePlay()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
+        Stars.Instance.Currency -= Session.Instance.BetAmount;
         Betpanel.Hide();
         GamePlay.ForEach(x=>x.SetActive(true));
         StartPanel.Show();
@@ -106,17 +119,20 @@ public class CanvasManager : MonoBehaviour
 
     public void OnGameOver()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         LostPanel.Show();
         GamePlay.ForEach(x=>x.SetActive(false));
         StartPanel.Hide();
     }public void OnTake()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         Scorepanel.Show();
         GamePlay.ForEach(x=>x.SetActive(false));
         StartPanel.Hide();
     }
     void Restrt()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.Button);
         MainMenu.Hide();
         Settingpanel.Hide();
         Betpanel.Show();

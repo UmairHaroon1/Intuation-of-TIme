@@ -30,6 +30,7 @@ public class Score : MonoBehaviour
         float winam = Session.Instance.BetAmount * Mathf.Round(Ball.Instance.score);
         winam = Mathf.Round(winam);
         Win.text = winam.ToString();
+        Stars.Instance.Currency += (int)winam;
         HighScores.Instance.playerscore.scores.Add((int)winam);
         Session.Instance.BetAmount = 0;
 

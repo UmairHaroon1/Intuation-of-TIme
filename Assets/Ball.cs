@@ -20,6 +20,7 @@ public class Ball : MonoBehaviour
 
     private void OnEnable()
     {
+        SoundManager.Instance.Play(SoundManager.Instance.FlewAway);
         BackgroundLoop.Instance.Toggle(true);
         score = 0;
     }

@@ -28,7 +28,7 @@ public class Bet : MonoBehaviour
         {
             BetBtn[i].color = Color.clear;
             Debug.Log("Button is clear");
-            if (int.Parse(BetBtn[i].gameObject.name) <= Stars.Instance._Currency)
+            if (int.Parse(BetBtn[i].gameObject.name) <= Stars.Instance.Currency)
             {
                 BetBtn[i].GetComponent<Button>().interactable = true;
                 OffBtn[i].color = Color.white;
@@ -60,9 +60,12 @@ public class Bet : MonoBehaviour
         }
 
         Session.Instance.BetAmount = int.Parse(img.gameObject.name);
-        Debug.Log("Button is White");
-        img.color = Color.white;
-        CanvasManager.Instanve.OnClickGamePlay();
+            
+            Debug.Log("Button is White");
+            img.color = Color.white;
+        
+       
+       
     }
 }
       
