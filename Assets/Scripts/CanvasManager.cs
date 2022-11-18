@@ -73,7 +73,7 @@ public class CanvasManager : MonoBehaviour
         LostPanel.Hide();
     }
 
-    public Button b;
+ //   public Button b;
     public void BackBtnClicked()
     {
 
@@ -125,14 +125,7 @@ public class CanvasManager : MonoBehaviour
         BestIndicaor.Hide();
         LostPanel.Hide();
 
-        b.onClick.Invoke();
-        MainMenu.SetActive(true);
-        Settingpanel.SetActive(false);
-        Betpanel.SetActive(false);
-        StartPanel.SetActive(false);
-        Scorepanel.SetActive(false);
-        BestIndicaor.SetActive(false);
-        LostPanel.SetActive(false);
+     
 
     }
 }

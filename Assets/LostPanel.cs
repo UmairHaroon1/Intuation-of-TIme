@@ -15,8 +15,8 @@ public class LostPanel : MonoBehaviour
     public void ShowScore() 
     {
         Debug.Log("text change into int");
-        Stars.Instance.Currency = int.Parse(Scoretext.gameObject.name);
-        Scoretext.text = Stars.Instance.name;
+
+        Scoretext.text = Session.Instance.BetAmount.ToString();
 
 
     }
