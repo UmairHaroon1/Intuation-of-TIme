@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-<<<<<<< Updated upstream
+
 using UnityEngine.SceneManagement;
-=======
+
 using UnityEngine.UI;
->>>>>>> Stashed changes
+
 
 public class CanvasManager : MonoBehaviour
 {
@@ -76,7 +76,7 @@ public class CanvasManager : MonoBehaviour
     public Button b;
     public void BackBtnClicked()
     {
-<<<<<<< Updated upstream
+
         MainMenu.Show();
         Settingpanel.Hide();
         Betpanel.Hide();
@@ -124,7 +124,7 @@ public class CanvasManager : MonoBehaviour
         Scorepanel.Hide();
         BestIndicaor.Hide();
         LostPanel.Hide();
-=======
+
         b.onClick.Invoke();
         MainMenu.SetActive(true);
         Settingpanel.SetActive(false);
@@ -133,6 +133,6 @@ public class CanvasManager : MonoBehaviour
         Scorepanel.SetActive(false);
         BestIndicaor.SetActive(false);
         LostPanel.SetActive(false);
->>>>>>> Stashed changes
+
     }
 }
